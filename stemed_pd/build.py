@@ -23,7 +23,7 @@ from . import stemedplus_disciplines
 from .disciplines import DISCIPLINES
 
 ROOT = Path(__file__).resolve().parent.parent
-USER_AGENT = "STEMEd+ Professional Development (https://github.com/JLib271/stemed-professional-development)"
+USER_AGENT = "STEMEd+ Professional Development (https://github.com/stemedplus/stemed-professional-development)"
 ASSETS = ("stemedplus-commons-logo.png", "stemedplus-commons-logo-white.png", "stemedplus-theme.css", "manrope.woff")
 
 

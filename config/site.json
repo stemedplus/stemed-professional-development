@@ -1,48 +1,48 @@
 {
   "title": "STEMEd+ Professional Development",
   "tagline": "Professional development for STEM+ educators, in one place: K-12 teachers, informal educators, college faculty and instructors, and graduate students and postdocs preparing to teach. Research experiences, fellowships, institutes, courses, webinars, and mentoring networks from national societies, US federal agencies, the Smithsonian, and national foundations, with application deadlines. State, district, and single-campus programs are not included.",
-  "repo_url": "https://github.com/JLib271/stemed-professional-development",
-  "site_url": "https://jlib271.github.io/stemed-professional-development/",
+  "repo_url": "https://github.com/stemedplus/stemed-professional-development",
+  "site_url": "https://stemedplus.github.io/stemed-professional-development/",
   "commons_home": "https://stemedplus.hcommons.org/",
   "related": [
     {
       "name": "STEMEd+ Deadlines",
-      "url": "https://jlib271.github.io/stemed-deadlines/",
+      "url": "https://stemedplus.github.io/stemed-deadlines/",
       "about": "every STEMEd+ deadline in one page and one calendar"
     },
     {
       "name": "For the classroom",
-      "url": "https://jlib271.github.io/STEMEd-Digest/classroom.html",
+      "url": "https://stemedplus.github.io/STEMEd-Digest/classroom.html",
       "about": "a monthly roundup of new articles in journals written for teachers and instructors, from the STEMEd+ Digest"
     },
     {
       "name": "STEMEd+ Conferences",
-      "url": "https://jlib271.github.io/stemed-conferences/",
+      "url": "https://stemedplus.github.io/stemed-conferences/",
       "about": "meetings, proposal deadlines, and travel support, including NSTA, NCTM, BCCE, and other teaching conferences"
     },
     {
       "name": "STEMEd+ Digest",
-      "url": "https://jlib271.github.io/STEMEd-Digest/",
+      "url": "https://stemedplus.github.io/STEMEd-Digest/",
       "about": "new journal articles, preprints, and dissertations"
     },
     {
       "name": "STEMEd+ Funding",
-      "url": "https://jlib271.github.io/stemed-funding/",
+      "url": "https://stemedplus.github.io/stemed-funding/",
       "about": "open calls and deadlines for STEM+ education funding"
     },
     {
       "name": "STEM+ Education Research Graduate Programs",
-      "url": "https://jlib271.github.io/stem-ed-research-programs/",
+      "url": "https://stemedplus.github.io/stem-ed-research-programs/",
       "about": "where to study STEM+ education research"
     },
     {
       "name": "STEMEd+ Jobs",
-      "url": "https://jlib271.github.io/stemed-jobs/",
+      "url": "https://stemedplus.github.io/stemed-jobs/",
       "about": "positions in STEM+ education"
     },
     {
       "name": "Where to publish your teaching work",
-      "url": "https://jlib271.github.io/STEMEd-Digest/publish.html",
+      "url": "https://stemedplus.github.io/STEMEd-Digest/publish.html",
       "about": "journals and proceedings for teaching innovations and SoTL, with fees, open access, and a first-timer's guide"
     }
   ],

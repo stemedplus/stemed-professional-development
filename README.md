@@ -1,7 +1,7 @@
 # STEMEd+ Professional Development
 
 National professional development for STEM+ educators, with application deadlines in one place, filtered by
-your role: **https://jlib271.github.io/stemed-professional-development/**
+your role: **https://stemedplus.github.io/stemed-professional-development/**
 
 - **K-12 teachers** (filter by grade band)
 - **Informal educators**: museums, science centers, zoos, aquariums, parks, nature centers, libraries, and
@@ -16,9 +16,9 @@ serving copies of this site's calendar and RSS so subscriptions keep working. Sh
 `#k12`, `#informal`, `#faculty`, `#grad`.
 
 STEMEd+ Professional Development is part of [STEMEd+ Commons](https://stemedplus.hcommons.org/), with
-[STEMEd+ Conferences](https://jlib271.github.io/stemed-conferences/), [STEMEd+ Funding](https://jlib271.github.io/stemed-funding/),
-[STEMEd+ Jobs](https://jlib271.github.io/stemed-jobs/), the [STEMEd+ Digest](https://jlib271.github.io/STEMEd-Digest/),
-and the [Graduate Programs](https://jlib271.github.io/stem-ed-research-programs/) list.
+[STEMEd+ Conferences](https://stemedplus.github.io/stemed-conferences/), [STEMEd+ Funding](https://stemedplus.github.io/stemed-funding/),
+[STEMEd+ Jobs](https://stemedplus.github.io/stemed-jobs/), the [STEMEd+ Digest](https://stemedplus.github.io/STEMEd-Digest/),
+and the [Graduate Programs](https://stemedplus.github.io/stem-ed-research-programs/) list.
 
 ## What is listed
 
@@ -33,7 +33,7 @@ and the [Graduate Programs](https://jlib271.github.io/stem-ed-research-programs/
 - **What kinds.** Research and field experiences, fellowships and cohort programs, workshops and institutes,
   online courses, webinar series, mentoring networks, coaching, certificate and certification training, workshops
   brought to your department, and teaching postdocs (such as NIH IRACDA). Teaching-focused job postings are on
-  [STEMEd+ Jobs](https://jlib271.github.io/stemed-jobs/teaching-jobs.html).
+  [STEMEd+ Jobs](https://stemedplus.github.io/stemed-jobs/teaching-jobs.html).
 - **What it shows.** Who it is for (with grades or career stage), cost or stipend, credit, format, how often it
   runs, and when applications open and close. Programs open for applications are listed first.
 
@@ -48,7 +48,7 @@ and the [Graduate Programs](https://jlib271.github.io/stem-ed-research-programs/
   own summer institute; and state and regional college programs, such as MAA section NExT programs.
 - University courses and degrees, programs run by companies, and programs open only to teachers in one city or state.
 - Teaching conferences such as NSTA, NCTM, BCCE, USCOTS, SABER, and the ASEE Annual Conference, which are on
-  [STEMEd+ Conferences](https://jlib271.github.io/stemed-conferences/).
+  [STEMEd+ Conferences](https://stemedplus.github.io/stemed-conferences/).
 
 ### Considered but not listed
 
@@ -59,7 +59,7 @@ national nonprofit sponsor. MAA OPEN Math online workshops: their NSF grant was 
 and we could not confirm 2026 workshops. The Cottrell Scholars Collaborative New Faculty Workshop: we could not
 confirm recent offerings.
 
-Disciplines come from the list shared across STEMEd+ Commons, kept in the [HuMeta profile](https://github.com/JLib271/humeta-profile)
+Disciplines come from the list shared across STEMEd+ Commons, kept in the [HuMeta profile](https://github.com/stemedplus/humeta-profile)
 (`stemedplus_disciplines.json`). Computer science is listed under Engineering and statistics under Mathematics, as on the other sites.
 
 ## Feeds and calendars
@@ -72,8 +72,8 @@ Disciplines come from the list shared across STEMEd+ Commons, kept in the [HuMet
 
 ## Add or correct a listing
 
-- [Suggest a program](https://github.com/JLib271/stemed-professional-development/issues/new?template=suggest_program.yml)
-- [Report new dates or a correction](https://github.com/JLib271/stemed-professional-development/issues/new?template=update_program.yml)
+- [Suggest a program](https://github.com/stemedplus/stemed-professional-development/issues/new?template=suggest_program.yml)
+- [Report new dates or a correction](https://github.com/stemedplus/stemed-professional-development/issues/new?template=update_program.yml)
 - No GitHub account? Email the maintainer, Julie Libarkin, at libarkin@msu.edu.
 
 To edit directly, see [CONTRIBUTING.md](CONTRIBUTING.md). Each program is one YAML file in `programs/`,
