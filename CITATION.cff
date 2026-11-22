@@ -1,0 +1,8 @@
+cff-version: 1.2.0
+message: "If you use this resource, please cite it as below."
+title: "STEMEd+ Professional Development"
+authors:
+  - name: "STEMEd+ Commons"
+license: MIT
+repository-code: "https://github.com/stemedplus/stemed-professional-development"
+url: "https://stemedplus.github.io/stemed-professional-development/"
