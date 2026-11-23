@@ -1,7 +1,7 @@
 """The STEMEd+ disciplines, read from the list shared across STEMEd+ Commons
-(humeta-profile's stemedplus_disciplines.json, stored here as
-stemedplus_disciplines.json; see stemedplus_disciplines.py). STEMEd+ Jobs,
-Funding, Digest, Conferences, Professional Development, and Graduate Programs all build from the same list."""
+(stemedplus-theme's stemedplus_disciplines.json, stored here as
+stemedplus_disciplines.json; see stemedplus_disciplines.py). Every STEMEd+ board
+builds from the same list."""
 from . import stemedplus_disciplines as shared
 
 DISCIPLINES = tuple(name for name, _ in shared.rules())

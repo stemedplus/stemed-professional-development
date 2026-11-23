@@ -3,7 +3,7 @@ providers: [National Earth Science Teachers Association]
 sponsor_type: US society
 type: webinars
 audiences: [K-12 teachers, Informal educators]
-disciplines: [Earth Science]
+disciplines: ["Astronomy & Space Science", Earth Science]
 format: online
 cost: members
 cost_note: Free for NESTA members; $10 for others.

@@ -24,7 +24,7 @@ jobs:
         with:
           python-version: "3.12"
       - run: pip install -r requirements.txt
-      - name: Refresh shared disciplines from HuMeta
+      - name: Refresh shared disciplines from stemedplus-theme
         run: python -m stemed_pd.stemedplus_disciplines --refresh
       - name: Refresh the shared STEMEd+ look
         continue-on-error: true
@@ -52,7 +52,7 @@ jobs:
       - name: Configure GitHub Pages
         id: pages
         uses: actions/configure-pages@v6
-      - name: Refresh shared disciplines from HuMeta
+      - name: Refresh shared disciplines from stemedplus-theme
         run: python -m stemed_pd.stemedplus_disciplines --refresh
       - name: Refresh the shared STEMEd+ look
         continue-on-error: true

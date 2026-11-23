@@ -100,7 +100,7 @@
       "items": {
         "type": "string"
       },
-      "description": "Labels from the STEMEd+ discipline list (stemed_pd/stemedplus_disciplines.json, kept in HuMeta). Leave empty for programs open to all STEM+ fields. Computer science is listed under Engineering; statistics under Mathematics."
+      "description": "Labels from the STEMEd+ discipline list (stemed_pd/stemedplus_disciplines.json, kept in stemedplus-theme). Leave empty for programs open to all STEM+ fields. Computer science is listed under Engineering; statistics under Mathematics."
     },
     "format": {
       "enum": [

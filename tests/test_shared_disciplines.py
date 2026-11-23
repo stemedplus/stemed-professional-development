@@ -6,15 +6,24 @@ from pathlib import Path
 from stemed_pd import stemedplus_disciplines as shared
 
 LABELS = [
-    "Agriculture", "Bioscience", "Chemistry", "Earth Science", "Engineering",
-    "Health Education", "History & Philosophy of Science", "Human Dimensions", "Learning Science", "Mathematics", "Physics",
-    "Science & Health Communication", "Science Education", "STEAM: Arts+STEM",
+    "Agriculture", "Astronomy & Space Science", "Bioscience", "Chemistry", "Computing", "Earth Science", "Engineering",
+    "Environmental Science", "Health Education", "History & Philosophy of Science", "Human Dimensions", "Learning Science",
+    "Mathematics", "Physics", "Science & Health Communication", "Science Education", "STEAM: Arts+STEM",
 ]
 
 
 class SharedDisciplineTests(unittest.TestCase):
     def test_stored_copy_is_valid_and_in_order(self):
         self.assertEqual([label for label, _ in shared.rules()], LABELS)
+
+    def test_new_v7_disciplines(self):
+        rules = dict(shared.rules())
+        self.assertTrue(rules["Astronomy & Space Science"].search("astronomy education research"))
+        self.assertFalse(rules["Physics"].search("astronomy education research"))
+        self.assertTrue(rules["Environmental Science"].search("environmental education"))
+        self.assertFalse(rules["Earth Science"].search("environmental education"))
+        self.assertTrue(rules["Computing"].search("computer science education"))
+        self.assertFalse(rules["Engineering"].search("computer science education"))
 
     def test_acronyms_match_only_in_capitals(self):
         physics = dict(shared.rules())["Physics"]

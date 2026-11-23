@@ -3,7 +3,7 @@ providers: [NASA, National Park Service, US Fish and Wildlife Service]
 sponsor_type: US federal agency
 type: course
 audiences: [Informal educators]
-disciplines: [Earth Science]
+disciplines: ["Astronomy & Space Science", Earth Science]
 format: varies
 cost: free
 cost_note: Courses are free; Virtual Academy teams can receive seed funding for projects.

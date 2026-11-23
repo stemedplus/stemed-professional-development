@@ -1,10 +1,10 @@
-"""The STEMEd+ disciplines, shared across STEMEd+ Commons through the HuMeta profile.
+"""The STEMEd+ disciplines, shared across STEMEd+ Commons through the STEMEd+ theme repository.
 
 The disciplines (ids, labels, definitions, and the words that match them) are
-kept in one file in the HuMeta profile, humeta-profile/stemedplus_disciplines.json. This
+kept in one file in stemedplus-theme, stemedplus_disciplines.json. This
 site keeps a copy next to this module and builds from it, so it always works
 offline. Run ``python -m <package>.stemedplus_disciplines --refresh [path]``
-(the build workflow does) to replace the copy with the current humeta-profile version; if
+(the build workflow does) to replace the copy with the current stemedplus-theme version; if
 the download fails or the new file is not valid, the copy is left as it was.
 
 This module is identical in every STEMEd+ site. Change it in all of them.
@@ -17,7 +17,7 @@ from pathlib import Path
 from typing import Dict, List, Optional, Tuple
 
 SOURCE_URL = (
-    "https://raw.githubusercontent.com/stemedplus/humeta-profile/main/stemedplus_disciplines.json"
+    "https://raw.githubusercontent.com/stemedplus/stemedplus-theme/main/stemedplus_disciplines.json"
 )
 VENDORED = Path(__file__).with_name("stemedplus_disciplines.json")
 _ID = re.compile(r"^[a-z][a-z0-9_]*$")
@@ -88,8 +88,8 @@ def terms(discipline_id: str, path: Path = VENDORED) -> str:
 
 
 def refresh(url: str = SOURCE_URL, path: Path = VENDORED, timeout: float = 30) -> str:
-    """Replace the copy with humeta-profile's current file if it downloads, is valid, and
-    is not older than the copy (a site pushed before humeta-profile is updated keeps
+    """Replace the copy with stemedplus-theme's current file if it downloads, is valid, and
+    is not older than the copy (a site pushed before stemedplus-theme is updated keeps
     its newer list instead of going back to the old one)."""
     try:
         with urllib.request.urlopen(url, timeout=timeout) as response:
@@ -104,13 +104,13 @@ def refresh(url: str = SOURCE_URL, path: Path = VENDORED, timeout: float = 30) -
         stored_version = 0
     if remote.get("version", 0) < stored_version:
         return (
-            f"kept the stored disciplines (version {stored_version} is newer than humeta-profile's "
+            f"kept the stored disciplines (version {stored_version} is newer than stemedplus-theme's "
             f"version {remote.get('version', 0)})"
         )
     if Path(path).exists() and Path(path).read_text(encoding="utf-8") == raw:
         return "stored disciplines are current"
     Path(path).write_text(raw, encoding="utf-8")
-    return "updated the stored disciplines from humeta-profile"
+    return "updated the stored disciplines from stemedplus-theme"
 
 
 def main(argv: Optional[List[str]] = None) -> int:

@@ -1,9 +1,9 @@
 {
-  "version": 6,
+  "version": 7,
   "title": "STEMEd+ disciplines",
-  "description": "The disciplines used across STEMEd+ Commons: STEMEd+ Jobs, Funding, Digest, and STEM+ Education Research Graduate Programs. Each site builds from this file, so the disciplines have the same ids, labels, meanings, and matching words everywhere. Most disciplines mean education and education research in a field; History & Philosophy of Science, Human Dimensions, and Science & Health Communication also include those fields themselves. Each site still decides how strictly to apply them (for example, Jobs lists a job under a discipline only when it is about education in that field).",
+  "description": "The disciplines used across STEMEd+ Commons: STEMEd+ Jobs, Funding, Conferences, Professional Development, Awards, Digest, and STEM+ Education Research Graduate Programs. Each site builds from this file, so the disciplines have the same ids, labels, meanings, and matching words everywhere. Most disciplines mean education and education research in a field; History & Philosophy of Science, Human Dimensions, and Science & Health Communication also include those fields themselves. Each site still decides how strictly to apply them (for example, Jobs lists a job under a discipline only when it is about education in that field). The master copy is in stemedplus/stemedplus-theme.",
   "how_to_match": "A discipline matches text when 'terms' (a regular-expression alternation) matches as whole words, ignoring case, or when one of 'acronyms' matches as a whole word in capitals only (so 'per year' is not PER). In Python: re.compile(r'\\b(?:' + terms + r')\\b' + ''.join(r'|\\b(?-i:' + a + r')\\b' for a in acronyms), re.IGNORECASE).",
-  "humeta_note": "humeta_disciplines lists the HuMeta discipline terms (ANZSRC 2020 Fields of Research) each discipline corresponds to.",
+  "humeta_note": "humeta_disciplines lists the ANZSRC 2020 Fields of Research each discipline corresponds to, as HuMeta terms (HuMeta maps each to the OECD Fields of Science that DataCite uses, and to the ERIC Thesaurus). Version 7 follows ANZSRC in giving astronomy and space science (5101, 5109), environmental sciences (41), and computing (46) their own disciplines.",
   "scope_note": "scope 'education': the discipline means education and education research in the field. scope 'field': it also includes the field itself (research, teaching, and practice), not only education in it.",
   "named_only_note": "named_only true: only listings that name this discipline are listed under it. Listings open to every STEM+ field (general STEM education) are not, because the discipline is defined by something general STEM listings lack (for STEAM, the arts).",
   "disciplines": [
@@ -19,6 +19,21 @@
         "terms": "agricultur(?:e|al|a)?|agri[- ]?science|ag ed|agronom(?:y|ic|ists?)|horticultur(?:e|al|ists?)|crop sciences?|crop and soil sciences?|weed sciences?|turf ?grass(?: sciences?)?|range(?:land)? (?:sciences?|management|ecology)|agroecolog(?:y|ical)|aquaculture|soil sciences?|soil scientists?|entomolog(?:y|ical|ists?)|plant sciences?|plant patholog(?:y|ists?)|plant breed(?:ing|ers?)|animal sciences?|dairy sciences?|poultry sciences?|forestry|forest (?:resources|sciences?|ecology|management)|silvicultur(?:e|al)|fisheries|food sciences?|food scientists?|cooperative extension",
         "acronyms": [],
         "note": "Soil science is also Earth Science; entomology, plant and animal sciences are also Bioscience. 'Natural resources', 'extension', and '4-H' alone are not matched because they are too broad (for example, 'tenure extension')."
+      }
+    },
+    {
+      "id": "astronomy_space",
+      "label": "Astronomy & Space Science",
+      "definition": "Teaching, learning, and education research in astronomy, astrophysics, and the space and planetary sciences, including astronomy education research, planetarium education, and space science education.",
+      "scope": "education",
+      "humeta_disciplines": [
+        "anzsrc_5101",
+        "anzsrc_5109"
+      ],
+      "match": {
+        "terms": "astronom(?:y|ical|ers?)|astrophysic(?:s|al|ists?)|astrobiolog(?:y|ical|ists?)|cosmolog(?:y|ical)|space sciences?|space physics|space weather|space exploration|heliophysics|solar physics|planetary sciences?|planetari(?:um|ums|a)",
+        "acronyms": [],
+        "note": "Matches astronomy and space science words only, so physics alone is Physics. 'Aerospace' is Engineering. Planetary geology is also Earth Science."
       }
     },
     {
@@ -52,15 +67,29 @@
       }
     },
     {
+      "id": "computing",
+      "label": "Computing",
+      "definition": "Teaching, learning, and education research in computing and the information and computing sciences, including computer science education and computing education research.",
+      "scope": "education",
+      "humeta_disciplines": [
+        "anzsrc_46"
+      ],
+      "match": {
+        "terms": "computer sciences?|computing|computational thinking|cyber ?security|informatics|programming education|cs education",
+        "acronyms": [],
+        "note": "Computer engineering is also Engineering. 'Data science' is not matched, because it is often statistics (Mathematics), and 'information science' is not, because it often means library science."
+      }
+    },
+    {
       "id": "earth_science",
       "label": "Earth Science",
-      "definition": "Teaching, learning, and education research in the geosciences: geology, atmospheric, ocean, climate, planetary, soil, and environmental sciences, including geoscience education research (GER).",
+      "definition": "Teaching, learning, and education research in the geosciences: geology, atmospheric, ocean, climate, and soil sciences, including geoscience education research (GER). Environmental science and planetary science beyond geology have their own disciplines, Environmental Science and Astronomy & Space Science.",
       "scope": "education",
       "humeta_disciplines": [
         "anzsrc_37"
       ],
       "match": {
-        "terms": "earth sciences?|geosciences?|geolog(?:y|ical|ists?)|geophysic(?:s|al)|geochemistry|geobiology|geomorpholog(?:y|ical)|hydrolog(?:y|ic|ical)|hydrogeology|atmospheric (?:sciences?|chemistry|physics)|meteorolog(?:y|ical)|climate|climatology|oceanograph(?:y|ic|ers?)|ocean sciences?|marine sciences?|paleontolog(?:y|ists?)|paleoclimat\\w*|seismolog(?:y|ists?)|volcanolog(?:y|ists?)|glaciolog(?:y|ists?)|mineralog(?:y|ists?)|petrolog(?:y|ists?)|sedimentolog(?:y|ists?)|tectonics|geochronolog(?:y|ists?)|planetary sciences?|soil sciences?|soil scientists?|environmental sciences?|environmental education|limnolog(?:y|ists?)|earth systems?|natural hazards",
+        "terms": "earth sciences?|geosciences?|geolog(?:y|ical|ists?)|geophysic(?:s|al)|geochemistry|geobiology|geomorpholog(?:y|ical)|hydrolog(?:y|ic|ical)|hydrogeology|atmospheric (?:sciences?|chemistry|physics)|meteorolog(?:y|ical)|climate|climatology|oceanograph(?:y|ic|ers?)|ocean sciences?|marine sciences?|paleontolog(?:y|ists?)|paleoclimat\\w*|seismolog(?:y|ists?)|volcanolog(?:y|ists?)|glaciolog(?:y|ists?)|mineralog(?:y|ists?)|petrolog(?:y|ists?)|sedimentolog(?:y|ists?)|tectonics|geochronolog(?:y|ists?)|soil sciences?|soil scientists?|limnolog(?:y|ists?)|earth systems?|natural hazards|planetary geolog(?:y|ists?)",
         "acronyms": [
           "GER"
         ]
@@ -69,15 +98,28 @@
     {
       "id": "engineering",
       "label": "Engineering",
-      "definition": "Teaching, learning, and education research in engineering and computing, including computer science education.",
+      "definition": "Teaching, learning, and education research in engineering and technology education, including engineering education research (EER). Computing and computer science education have their own discipline, Computing.",
       "scope": "education",
       "humeta_disciplines": [
-        "anzsrc_40",
-        "anzsrc_46"
+        "anzsrc_40"
       ],
       "match": {
-        "terms": "engineering|engineer(?:s|ing)?|computer sciences?|computing|computational thinking|cyber ?security",
+        "terms": "engineering|engineer(?:s|ing)?",
         "acronyms": []
+      }
+    },
+    {
+      "id": "environmental_science",
+      "label": "Environmental Science",
+      "definition": "Teaching, learning, and education research in the environmental sciences and environmental and sustainability education, including environmental literacy and climate change education.",
+      "scope": "education",
+      "humeta_disciplines": [
+        "anzsrc_41"
+      ],
+      "match": {
+        "terms": "environmental sciences?|environmental studies|environmental education|environmental literacy|environmental and sustainability education|sustainability (?:sciences?|education)|education for sustainable development|climate (?:change )?education",
+        "acronyms": [],
+        "note": "'Environmental' alone is not matched because it is too broad (for example, 'environmental health and safety'). Climate science itself is Earth Science; climate education is both."
       }
     },
     {
@@ -155,13 +197,13 @@
     {
       "id": "physics",
       "label": "Physics",
-      "definition": "Teaching, learning, and education research in physics, astronomy, and the physical and space sciences, including physics education research (PER).",
+      "definition": "Teaching, learning, and education research in physics and the physical sciences, including physics education research (PER). Astronomy and space science have their own discipline, Astronomy & Space Science.",
       "scope": "education",
       "humeta_disciplines": [
         "anzsrc_51"
       ],
       "match": {
-        "terms": "physics|physicists?|physical sciences?|quantum|astrophysic(?:s|al)|astronom(?:y|ical|ers?)|cosmology|space sciences?|space physics|space weather|heliophysics|planetary sciences?|biophysics|condensed matter|optics|photonics",
+        "terms": "physics|physicists?|physical sciences?|quantum|biophysics|condensed matter|optics|photonics",
         "acronyms": [
           "PER"
         ],
@@ -194,7 +236,7 @@
       "match": {
         "terms": "(?<!computer )(?:science education|science teaching(?! (?:professors?|faculty|positions?|track|stream|fellows?|assistant|associate|lecturers?|instructors?))|science teacher education|science teachers?)|stem education|stem teaching|stem teachers?|discipline[- ]based education research|dber",
         "acronyms": [],
-        "note": "'Computer science education' and 'computer science teachers' are Engineering (computing), not Science Education. '[Field] Science Teaching Professor' is a teaching-track title in that field, not Science Education."
+        "note": "'Computer science education' and 'computer science teachers' are Computing, not Science Education. '[Field] Science Teaching Professor' is a teaching-track title in that field, not Science Education."
       }
     },
     {

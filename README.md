@@ -59,8 +59,8 @@ national nonprofit sponsor. MAA OPEN Math online workshops: their NSF grant was 
 and we could not confirm 2026 workshops. The Cottrell Scholars Collaborative New Faculty Workshop: we could not
 confirm recent offerings.
 
-Disciplines come from the list shared across STEMEd+ Commons, kept in the [HuMeta profile](https://github.com/stemedplus/humeta-profile)
-(`stemedplus_disciplines.json`). Computer science is listed under Engineering and statistics under Mathematics, as on the other sites.
+Disciplines come from the list shared across STEMEd+ Commons, kept in [stemedplus-theme](https://github.com/stemedplus/stemedplus-theme)
+(`stemedplus_disciplines.json`). Computer science has its own discipline, Computing, and statistics is listed under Mathematics, as on the other sites.
 
 ## Feeds and calendars
 
@@ -83,7 +83,7 @@ checked against `schema/program.schema.json`.
 
 A GitHub Actions workflow (`.github/workflows/update.yml`) runs every day and on every push:
 
-1. refreshes the shared discipline list from HuMeta;
+1. refreshes the shared discipline list from stemedplus-theme;
 2. runs the tests and checks every file in `programs/`;
 3. builds the site into `output/` and publishes it to GitHub Pages. Sessions whose dates have all passed drop
    off, passed deadlines are marked, programs open for applications move to the top, and the date each program
