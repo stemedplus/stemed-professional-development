@@ -179,6 +179,9 @@
     <div class="join join-bottom" role="note"><p><strong>STEMEd+ Professional Development is part of STEMEd+ Commons</strong>, which brings together teachers, researchers, and learning professionals from every field to share work, find each other, and build what comes next. Join to set up your profile, add papers, posters, slides, and other work to the <a href="https://works.hcommons.org/collections/stemedplus/" target="_blank" rel="noopener noreferrer">STEMEd+ Library<span class="vh"> (opens in a new tab)</span></a> with a DOI, share datasets in <a href="https://works.hcommons.org/collections/stemedplus-data/" target="_blank" rel="noopener noreferrer">STEMEd+ Data<span class="vh"> (opens in a new tab)</span></a>, and connect with teachers and researchers across fields. You can sign in through your institution, ORCID, or another provider.</p><p><a href="https://stemedplus.org/" target="_blank" rel="noopener noreferrer">Visit STEMEd+ Commons<span class="vh"> (opens in a new tab)</span></a> · <a href="https://stemedplus.org/join-stemed/" target="_blank" rel="noopener noreferrer">Join STEMEd+<span class="vh"> (opens in a new tab)</span></a></p></div></div>
     <h2><a id="morehead" href="https://stemedplus.hcommons.org/">More from STEMEd+ Commons</a></h2>
     <ul id="related"></ul>
+    <h2 id="communityhead" hidden>Other community resources</h2>
+    <p id="communitynote" hidden>Run by other organizations; we link to them because they are useful.</p>
+    <ul id="community" hidden></ul>
     <details id="reviewbox" hidden><summary id="reviewsum">For maintainers</summary><ul id="reviewlist"></ul></details>
     <p><a id="repo" href="#">About this site</a> · <span id="updated"></span></p>
   </div>
@@ -423,6 +426,8 @@
       b.addEventListener('click', function () { navigator.clipboard && navigator.clipboard.writeText(el(b.getAttribute('data-copy')).textContent); b.textContent = 'Copied'; });
     });
     site.related.forEach(function (r) { var li = document.createElement('li'); li.appendChild(link(r.url, r.name)); li.appendChild(document.createTextNode(': ' + r.about)); el('related').appendChild(li); });
+    (site.community || []).forEach(function (r) { var li = document.createElement('li'); li.appendChild(link(r.url, r.name)); li.appendChild(document.createTextNode(': ' + r.about)); el('community').appendChild(li); });
+    if ((site.community || []).length) { el('communityhead').hidden = el('communitynote').hidden = el('community').hidden = false; }
     if (d.review.length) {
       el('reviewbox').hidden = false; el('reviewsum').textContent = 'For maintainers: ' + d.review.length + ' listing(s) to re-check';
       d.review.forEach(function (r) { el('reviewlist').appendChild(node('li', '', r.title + ' (' + r.file + '): ' + r.why.join('; '))); });
